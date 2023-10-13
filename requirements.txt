@@ -1,0 +1,9 @@
+python-dotenv
+langchain~=0.0.190
+Flask~=2.3.2
+flask-cors
+boto3
+openai
+awswrangler[postgres]
+pg8000
+psycopg2-binary
