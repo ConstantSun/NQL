@@ -13,8 +13,8 @@ def get_athena_client() -> boto3:
         "region_name": os.getenv("ATHENA_REGION")
     }
 
-    use_sts = all([sts_envs[env] is not None for env in sts_envs])
-
+    use_sts = all([ len(sts_envs[env]) > 0 for env in sts_envs])
+    
     if use_sts:
         session = boto3.Session()
         sts_client = session.client("sts")
