@@ -32,9 +32,11 @@ def get_bedrock_client() -> boto3:
         boto3_kwargs["aws_secret_access_key"] = response["Credentials"]["SecretAccessKey"]
         boto3_kwargs["aws_session_token"] = response["Credentials"]["SessionToken"]
 
+    bedrock_region = os.getenv("BEDROCK_REGION")
     bedrock_client = boto3.client(
         "bedrock",
-        **boto3_kwargs
+        **boto3_kwargs,
+        endpoint_url=f"https://bedrock-runtime.{bedrock_region}.amazonaws.com"
     )
 
     return bedrock_client
