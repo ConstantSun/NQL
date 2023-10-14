@@ -183,7 +183,7 @@ def sql_inference():
                 'Catalog': data_information["catalog_name"]
             },
             ResultConfiguration={
-                'OutputLocation': 's3://pinpoint-analytics-demo-1/demonql/'
+                'OutputLocation': 's3://a4l-query-result-98998/'
             },
             ResultReuseConfiguration={
                 "ResultReuseByAgeConfiguration": {
