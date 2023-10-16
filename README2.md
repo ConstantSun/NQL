@@ -1,6 +1,6 @@
 # Things to Update 
-- S3 output for athena in app.py file
 - .env file 
+- (If you use Athena for DB) S3 output for athena in app.py file
 
 # How to run:
 ```
